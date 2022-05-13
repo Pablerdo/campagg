@@ -9,12 +9,10 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <div className='header'>
-            <Link to='/'>
-                <img
-                    className="header__icon"
-                    src={require("./Ivy_League_logo.png")}
-                    alt=""
-                />
+            <Link to={"/"} style={{textDecoration: "none"}}>
+                <div className='header__left'>
+                    <h1 style={{color: "black"}}>InspireSummer</h1>
+                </div>
             </Link>
 
             <div className='header__center'>
@@ -23,9 +21,7 @@ function Header() {
             </div>
 
             <div className='header__right'>
-                <p>Become a host</p>
-                <LanguageIcon />
-                <ExpandMoreIcon />
+                <img src={require("./images/Ivy_League_logo.png")} style={{marginRight: "20px", height: "40px"}}/>
                 <Avatar />
             </div>
         </div>
