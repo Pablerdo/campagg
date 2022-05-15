@@ -13,6 +13,7 @@ function SearchPage() {
                 <Button variant="outlined">Academic</Button>
                 <Button variant="outlined">Price</Button>
                 <Button variant="outlined">Housing</Button>
+                <Button variant="outlined"></Button>
                 <Button variant="outlined">More filters</Button>
             </div>
             <SearchResult

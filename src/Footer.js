@@ -4,7 +4,7 @@ import './Footer.css'
 function Footer() {
     return (
         <div className='footer'>
-            <p>© 2020 Ivy Summer</p>
+            <p>© 2022 Ivy Summer</p>
             <p>Privacy · Terms · Sitemap · Company Details</p>
         </div>
     )

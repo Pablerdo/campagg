@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import "firebase/auth";
+import {getAuth} from "firebase/auth"
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -9,19 +9,17 @@ import "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyCD3jpudb3oGNCRYALrjuLlOiIDmWyLb8o",
-    authDomain: "campagg-37239.firebaseapp.com",
-    databaseURL: "https://campagg-37239-default-rtdb.firebaseio.com",
-    projectId: "campagg-37239",
-    storageBucket: "campagg-37239.appspot.com",
-    messagingSenderId: "644856905905",
-    appId: "1:644856905905:web:4c9b50b386807e49cd6290",
-    measurementId: "G-RD0FKLGX2L"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    databaseURL:  process.env.REACT_APP_FIREBASE_DATABASE_URL,
+    projectId:  process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket:  process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId:  process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId:  process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId:  process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
-export const auth = app.auth()
-export default app
+export const auth = getAuth(app)
