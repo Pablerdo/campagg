@@ -2,19 +2,32 @@ import React from 'react';
 import './SearchPage.css';
 import Button from "@mui/material/Button";
 import SearchResult from "./SearchResult";
+import {ToggleButton, ToggleButtonGroup} from "@mui/material";
 
 function SearchPage() {
+    const [alignment, setAlignment] = React.useState()
+    const handleChange = (event, newAlignment) => {
+        setAlignment(newAlignment)
+    }
+
     return (
         <div className='searchPage'>
             <div className='searchPage__info'>
-                <p>x camps </p>
-                <h1>Results</h1>
-                <Button variant="outlined">Athletic</Button>
-                <Button variant="outlined">Academic</Button>
-                <Button variant="outlined">Price</Button>
-                <Button variant="outlined">Housing</Button>
-                <Button variant="outlined"></Button>
-                <Button variant="outlined">More filters</Button>
+                <p># results </p>
+                <h1>Camps</h1>
+                <ToggleButtonGroup
+                    color="primary"
+                    value={alignment}
+                    exclusive
+                    onChange={handleChange}
+                >
+                    <ToggleButton value="athletic">Athletic</ToggleButton>
+                    <ToggleButton value="academic">Academic</ToggleButton>
+                    <ToggleButton value="price">Price</ToggleButton>
+                    <ToggleButton value="housing">Housing</ToggleButton>
+                    <ToggleButton value="ivy_league">Ivy League</ToggleButton>
+                    <ToggleButton value="more_filters">More Filters</ToggleButton>
+                </ToggleButtonGroup>
             </div>
             <SearchResult
                 img="https://media.cntraveler.com/photos/5c1137222a1ed14acdea31a2/16:9/w_2560,c_limit/GettyImages-594949892.jpg"

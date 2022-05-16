@@ -1,10 +1,12 @@
 .card {
-margin: 10px;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
-transition: transform 100ms ease-in;
-cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    max-width: 30vw;
 }
 
 .card:hover {
@@ -40,4 +42,15 @@ cursor: pointer;
     font-weight: 300;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+
+}
+.card__duration {
+    margin-left: auto;
+    margin-right: 10px;
+    font-weight: normal
 }

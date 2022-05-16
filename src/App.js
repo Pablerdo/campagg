@@ -8,6 +8,7 @@ import PrivateRoute from './PrivateRoute'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {createTheme, ThemeProvider} from "@mui/material";
 import {AuthProvider} from "./contexts/AuthContext";
+import ScrollToTop from "./ScrollToTop";
 
 
 function App() {
@@ -24,7 +25,9 @@ function App() {
             <ThemeProvider theme={theme}>
                 <div className="app">
                     <Router>
+
                         <Header />
+                        <ScrollToTop />
                         <Routes>
                             <Route exact path='/search' element={<PrivateRoute/>}>
                                 <Route exact path='/search' element={<SearchPage/>}/>
