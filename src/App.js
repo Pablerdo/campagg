@@ -25,7 +25,6 @@ function App() {
             <ThemeProvider theme={theme}>
                 <div className="app">
                     <Router>
-
                         <Header />
                         <ScrollToTop />
                         <Routes>

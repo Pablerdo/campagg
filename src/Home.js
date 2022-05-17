@@ -74,13 +74,13 @@ function Home() {
                     src="https://media.cntraveler.com/photos/5c1137222a1ed14acdea31a2/16:9/w_2560,c_limit/GettyImages-594949892.jpg"
                     title="STEM Camp at UPenn"
                     description="Science Technology Engineering Mathematics"
-                    price="$350/day"
+                    price="350/day"
                 />
                 <Card
                     src="https://media.cntraveler.com/photos/5c1137222a1ed14acdea31a2/16:9/w_2560,c_limit/GettyImages-594949892.jpg"
                     title="STEM Camp at UPenn"
                     description="Science Technology Engineering Mathematics"
-                    price="$70/day"
+                    price="70/day"
                 />
             </div>
         </div>
